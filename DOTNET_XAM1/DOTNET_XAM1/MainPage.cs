@@ -23,6 +23,20 @@ namespace DOTNET_XAM1
 		    addNewItemButton.Text = "Add new ToDoItem!";
             addNewItemButton.Clicked += AddNewItemButton_Clicked;
 
+            ToolbarItem toolbarItem = new ToolbarItem();
+		    toolbarItem.Text = "Add new";
+		    toolbarItem.Clicked += AddNewItemButton_Clicked;
+
+		    if (Device.RuntimePlatform == Device.Android)
+		    {
+                toolbarItem.Icon = "plus.png";
+		    }
+		       
+
+
+
+            ToolbarItems.Add(toolbarItem);
+
             Content = new ScrollView() { 
             Content = new StackLayout {
 				Children = {
