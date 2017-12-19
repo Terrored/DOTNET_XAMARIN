@@ -17,6 +17,7 @@ namespace DOTNET_XAM1
             listView = new ListView();
 		    listView.ItemsSource = Globals.Items;
             listView.ItemSelected += ListView_ItemSelected;
+            listView.ItemTemplate = new DataTemplate(typeof(ViewXaml));
 
             addNewItemButton = new Button();
 		    addNewItemButton.Text = "Add new ToDoItem!";
